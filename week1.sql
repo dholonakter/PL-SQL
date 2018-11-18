@@ -90,3 +90,23 @@ begin
 DBMS_OUTPUT.PUT_LINE(currrentresult);
 end loop;
 end;
+--------------------------
+--exercise 5------
+/
+SET SERVEROUTPUT ON
+declare
+askdigit number(2);
+counter number(2):=9;
+digitmultiply integer;
+begin
+   DBMS_OUTPUT.PUT_LINE('bank statement valid number');
+    loop
+   askdigit:=&number;
+   digitmultiply:=digitmultiply+(counter*askdigit);
+        counter:=counter-1;
+      exit when counter>1;
+     end loop;
+    DBMS_OUTPUT.PUT_LINE(digitmultiply);
+
+   end;
+
